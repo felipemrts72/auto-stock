@@ -1,0 +1,104 @@
+/* ---------- RESET BÁSICO ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- BASE ---------- */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background-color: #020617; /* fundo escuro industrial */
+  color: #e5e7eb;
+}
+
+/* ---------- LINKS ---------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- BUTTON RESET ---------- */
+button {
+  font-family: inherit;
+  outline: none;
+}
+
+/* ---------- SCROLL ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.page-center {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.form {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  background: #020617;
+  padding: 24px;
+  border-radius: 8px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.form input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+
+  background: #2563eb;
+  color: #fff;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form button:hover {
+  background: #1d4ed8;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 13px;
+}
