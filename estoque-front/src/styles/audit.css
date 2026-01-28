@@ -1,0 +1,13 @@
+/* styles/audit.css */
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* cards responsivos */
+  gap: 20px; /* distância entre os cards */
+  padding: 20px;
+  background-color: #fff; /* fundo branco */
+  border-radius: 8px;
+}
