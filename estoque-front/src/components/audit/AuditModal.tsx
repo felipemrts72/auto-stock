@@ -21,8 +21,10 @@ const AuditModal: React.FC<Props> = ({ data, onClose }) => {
           <h4>Dados principais</h4>
           <p>Colaborador: {data.collaborator}</p>
           <p>Serviço: {data.serviceNumber}</p>
-          <p>Quantidade: {data.quantity} {data.unit}</p>
-          <p>Data/Hora: {data.dateTime}</p>
+          <p>
+            Quantidade: {data.quantity} {data.unit}
+          </p>
+          <p>Data/Hora: {new Date(data.dateTime).toLocaleString()}</p>
           <p>Status: {data.status}</p>
         </section>
 

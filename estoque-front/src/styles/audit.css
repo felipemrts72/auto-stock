@@ -1,45 +1,74 @@
-/* styles/audit.css */
-
+/* GRID DE CARDS */
 .audit-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(250px, 1fr)
-  ); /* cards responsivos */
-  gap: 20px; /* distância entre os cards */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   padding: 20px;
-  background-color: #fff; /* fundo branco */
+  background-color: #f9f9f9;
   border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: start; /* evita sobreposição */
 }
 
-/* Overlay */
+/* CARD */
+.audit-card {
+  background-color: #fff;
+  color: #000;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 250px; /* altura mínima uniforme */
+}
+
+.audit-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.audit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* MODAL */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* cinza semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Conteúdo do popup */
 .modal-content {
-  background-color: #fff; /* popup branco */
+  background-color: #fff;
+  color: #000;
   padding: 24px;
   border-radius: 10px;
   width: 90%;
-  max-width: 700px; /* tamanho fixo máximo */
+  max-width: 700px;
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
-/* Botão de fechar */
 .modal-close-btn {
   position: absolute;
   top: 12px;
@@ -54,44 +83,4 @@
 
 .modal-close-btn:hover {
   background-color: #d32f2f;
-}
-
-.audit-grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(280px, 1fr)
-  ); /* cards responsivos */
-  gap: 20px; /* espaço entre os cards */
-  padding: 20px;
-  background-color: #f9f9f9; /* fundo leve para o grid */
-  border-radius: 8px;
-}
-
-.audit-card {
-  background-color: #fff;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.audit-card img {
-  width: 100%;
-  max-height: 150px;
-  object-fit: contain;
-  border-radius: 6px;
-  margin-bottom: 12px;
-}
-
-.audit-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
