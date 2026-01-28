@@ -1,6 +1,5 @@
 import type { AuditItem } from '../../types/audit';
 
-
 interface Props {
   data: AuditItem | null;
   onClose: () => void;
@@ -10,9 +9,11 @@ const AuditModal: React.FC<Props> = ({ data, onClose }) => {
   if (!data) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <button onClick={onClose}>Fechar</button>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close-btn" onClick={onClose}>
+          Fechar
+        </button>
 
         <h3>{data.itemName}</h3>
 
@@ -25,7 +26,7 @@ const AuditModal: React.FC<Props> = ({ data, onClose }) => {
           <p>Status: {data.status}</p>
         </section>
 
-        {/* Depois podemos detalhar Seção 01..07 */}
+        {/* Futuras Seções 01..07 */}
       </div>
     </div>
   );

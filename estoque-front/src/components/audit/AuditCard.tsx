@@ -1,5 +1,5 @@
 import type { AuditItem } from '../../types/audit';
-
+import './AuditCard.css'
 
 
 interface Props {
@@ -12,6 +12,7 @@ const statusColor: Record<string, string> = {
   incompleto: 'orange',
   divergente: 'red',
 };
+
 
 const AuditCard: React.FC<Props> = ({ data, onClick }) => {
   return (
